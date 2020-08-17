@@ -1,5 +1,7 @@
 <?php  // resources/lang/ja/validation.php
+
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -10,6 +12,7 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
+
     'accepted'             => ':attributeを承認してください。',
     'active_url'           => ':attributeは正しいURLではありません。',
     'after'                => ':attributeは:date以降の日付にしてください。',
@@ -71,6 +74,7 @@ return [
     'timezone'             => ':attributeは正しいタイムゾーンをしていしてください。',
     'unique'               => ':attributeは既に存在します。',
     'url'                  => ':attributeを正しい書式にしてください。',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -81,11 +85,13 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
+
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -96,9 +102,5 @@ return [
     | of "email". This simply helps us make messages a little cleaner.
     |
     */
-    'attributes' => [
-        'title' => 'タイトル',
-        'body' => '本文',
-        'image' => 'サムネイル画像'
-      ],
-];
+
+    'attributes' => [],
