@@ -10,12 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Auth::routes();
 
 Route::get('/', 'ReviewController@index')->name('index');
-
-Auth::routes();
-Route::get('/show/{id}','ReviewController@show')->name('show');
+Route::get('/show/{id}', 'ReviewController@show')->name('show');
 
 Route::group(['middleware' => 'auth'],function() {
     
