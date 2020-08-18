@@ -103,4 +103,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title' => 'タイトル',
+        'body' => '本文',
+        'image' => 'サムネイル画像'
+      ],
+];
