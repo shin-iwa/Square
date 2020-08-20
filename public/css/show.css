@@ -11,3 +11,12 @@
   width: 10em;
   margin: auto;
 }
+.book-image {
+  max-height: 150px;
+  max-width: 100%;
+  /* height: 100%;
+  width: 100%; */
+  /* width: 150px; */
+  margin-bottom: 20px;
+  object-fit: cover;
+}

@@ -6,12 +6,12 @@
 
 @section('content')
 <div class="container">
-  <h1 class='pagetitle'>レビューページ</h1>
+  <h1 class='pagetitle'>編集</h1>
   <div class="card">
     <div class="card-body d-flex">
       <section class='review-main'>
         <!-- <h2 class='h2'>本のタイトル</h2> -->
-        <p class='h2 mb20'>{{ $review->title }}</p>
+        <p class='h2 mb20'>{{ old($review->title) }}</p>
         <!-- <h2 class='h2'>レビュー本文</h2> -->
         <p>{{ $review->body }}</p>
       </section>  
@@ -26,7 +26,7 @@
       <p>{{ $review->created_at }}</p>
       <p>{{ $review->user_id }}</p>
     <a href="{{ route('index') }}" class='btn btn-info btn-back mb20'>一覧へ戻る</a>
-    <a href="{{ action('ReviewController@edit') }}" class='btn btn-info btn-back mb20'>[edit]</a>
+    <a href="{{ action('ReviewController@edit', $post }}" class='btn btn-info btn-back mb20'>[edit]</a>
   </div>
 </div>
 @endsection

@@ -13,10 +13,14 @@ class ReviewController extends Controller
         return view('index',compact('reviews'));
     }
 
-    public function show($id)
+    public function show(Review $review)
     {
-        $review = Review::where('id', $id)->where('status', 1)->first();
-        return view('show', compact('review'));
+        return view('show')->with('review', $review);
+    }
+
+    public function edit($id)
+    {
+        return view('review.edit', compact('review'));
     }
 
 
