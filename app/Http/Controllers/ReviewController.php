@@ -18,16 +18,22 @@ class ReviewController extends Controller
         return view('show')->with('review', $review);
     }
 
-    public function edit($id)
-    {
-        return view('review.edit', compact('review'));
-    }
-
-
     public function create()
     {
         return view('review');
     }
+
+    public function edit(Review $review)
+    {
+        return view('edit')->with('review', $review);
+    }
+
+    public function update(Request $request, Review $review)
+    {
+        return view('edit')->with('review', $review);
+    }
+
+
 
     public function store(Request $request)
     {

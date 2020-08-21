@@ -26,7 +26,9 @@
       <p>{{ $review->created_at }}</p>
       <p>{{ $review->user_id }}</p>
     <a href="{{ route('index') }}" class='btn btn-info btn-back mb20'>一覧へ戻る</a>
-    <a href="{{ action('ReviewController@edit') }}" class='btn btn-info btn-back mb20'>[edit]</a>
+
+    <a href="{{ route('edit') }}" class='btn btn-info btn-back mb20'>修正</a>
+
   </div>
 </div>
 @endsection

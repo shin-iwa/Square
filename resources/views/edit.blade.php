@@ -1,32 +1,40 @@
 @extends('layouts.app')
 
-@section('css')
-    <link href="{{ asset('css/show.css') }}" rel="stylesheet">
-@endsection
-
 @section('content')
-<div class="container">
-  <h1 class='pagetitle'>編集</h1>
-  <div class="card">
-    <div class="card-body d-flex">
-      <section class='review-main'>
-        <!-- <h2 class='h2'>本のタイトル</h2> -->
-        <p class='h2 mb20'>{{ old($review->title) }}</p>
-        <!-- <h2 class='h2'>レビュー本文</h2> -->
-        <p>{{ $review->body }}</p>
-      </section>  
-      <!-- <aside class='review-image'> -->
-@if(!empty($review->image))
-        <img class='book-image' src="{{ asset('storage/images/'.$review->image) }}">
-@else
-        <img class='book-image' src="{{ asset('images/dummy.png') }}">
-@endif
-      </aside>
+<h1 class='pagetitle'>修正ページ</h1>
+  @if($errors->any())
+    <div class='alert alert-danger'>
+      <ul>
+        @foreach($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
     </div>
-      <p>{{ $review->created_at }}</p>
-      <p>{{ $review->user_id }}</p>
-    <a href="{{ route('index') }}" class='btn btn-info btn-back mb20'>一覧へ戻る</a>
-    <a href="{{ action('ReviewController@edit', $post }}" class='btn btn-info btn-back mb20'>[edit]</a>
-  </div>
+  @endif
+  
+<div class="row justify-content-center container">
+    <div class="col-md-10">
+      <form method='POST' action="{{ url('$review->id' )}}" enctype="multipart/form-data">
+        @csrf
+        {{ method_field('patch') }}
+        <div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <label>本のタイトル</label>
+                <input type='text' class='form-control' name='title' value="{{ old('title', $review->title) }}">
+              </div>
+              <div class="form-group">
+              <label>レビュー本文</label>
+                <textarea class='description form-control' name='body' value="{{ old('body', $review->body) }}"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="file1">本のサムネイル</label>
+                <input type="file" id="file1" name='image' class="form-control-file" value="{{ old('image', $review->image) }}">
+              </div>
+              <input type='submit' class='btn btn-primary' value='修正'>
+            </div>
+        </div>
+      </form>
+    </div>
 </div>
 @endsection
