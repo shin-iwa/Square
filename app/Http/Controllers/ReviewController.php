@@ -38,16 +38,9 @@ class ReviewController extends Controller
             'image' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        if($request->hasFile('image')) {
-        
-            $request->file('image')->store('/public/images');
-            $data = ['user_id' => \Auth::id(), 'title'=> $post['title'],'body'=> $post['body'],'image'=> $request->file('image')->hashName()];
-
-        }else{
-            $data= ['user_id'=>\Auth::id(),'title'=>$post['title'],'body'=>$post['body']];
-        }
-
-        Review::insert($data);
+        $review->title = $request->title;
+        $review->body = $request->body;
+        $review->save();
 
         return redirect()->back()->with('flash_message', '投稿が完了しました');
 
