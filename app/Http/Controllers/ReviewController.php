@@ -9,7 +9,7 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        $reviews = Review::where('status', 1)->orderBy('created_at','DESC')->paginate(9);
+        $reviews = Review::where('status', 1)->orderBy('updated_at','DESC')->paginate(9);
         return view('index',compact('reviews'));
     }
 
@@ -39,9 +39,9 @@ class ReviewController extends Controller
 
         $review->title = $request->title;
         $review->body = $request->body;
+        $review->image = $request->image;
         $review->save();
-
-        return redirect()->back()->with('flash_message', '投稿が完了しました');
+        return view('show')->with('review', $review)->with('flash_message', '修正が完了しました');
 
     }
 

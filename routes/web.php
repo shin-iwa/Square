@@ -17,10 +17,10 @@ Route::get('/{review}', 'ReviewController@show')->name('show');
 
 Route::group(['middleware' => 'auth'],function() {
     
+    Route::get('/review/create','ReviewController@create')->name('create');
     Route::post('/review/store','ReviewController@store')->name('store');
     Route::get('/{review}/edit', 'ReviewController@edit')->name('edit');
     Route::patch('/{review}', 'ReviewController@update')->name('update');
-    Route::get('/review','ReviewController@create')->name('create');
 
 });
 Route::get('/home', 'HomeController@index')->name('home');
