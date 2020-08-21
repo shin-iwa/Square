@@ -25,7 +25,7 @@
               </div>
               <div class="form-group">
               <label>レビュー本文</label>
-                <textarea class='description form-control' name='body' value="{{ old('body', $review->body) }}"></textarea>
+                <textarea class='description form-control' name='body'>{{ old('body', $review->body) }}</textarea>
               </div>
               <div class="form-group">
                 <label for="file1">本のサムネイル</label>
