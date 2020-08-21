@@ -19,8 +19,8 @@ Route::group(['middleware' => 'auth'],function() {
     
     Route::get('/review','ReviewController@create')->name('create');
     Route::post('/review/store','ReviewController@store')->name('store');
-    Route::get('/review/edit', 'ReviewController@edit')->name('edit');
-
+    Route::get('/{review}/edit', 'ReviewController@edit')->name('edit');
+    Route::patch('/{review}/edit', 'ReviewController@edit')->name('update');
 
 });
 Route::get('/home', 'HomeController@index')->name('home');
