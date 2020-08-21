@@ -15,8 +15,8 @@
 <div class="row justify-content-center container">
     <div class="col-md-10">
       <form method='POST' action="{{ url('$review->id' )}}" enctype="multipart/form-data">
+        @method('patch')
         @csrf
-        {{ method_field('patch') }}
         <div class="card">
             <div class="card-body">
               <div class="form-group">
