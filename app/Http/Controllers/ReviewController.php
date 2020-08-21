@@ -39,7 +39,16 @@ class ReviewController extends Controller
 
         $review->title = $request->title;
         $review->body = $request->body;
-        $review->image = $request->image;
+        if($request->hasFile('image')) {
+        
+            $review->fill($request->input());
+            $review->pic1 = $request->file('pic1')->store('public/images');
+
+
+
+        }else{
+            $data= ['user_id'=>\Auth::id(),'title'=>$review['title'],'body'=>$review['body']];
+        }
         $review->save();
         return view('show')->with('review', $review)->with('flash_message', '修正が完了しました');
 
