@@ -29,7 +29,7 @@
       @if(!empty($review->image))
           <img class='book-image' src="/storage/post_images/{{ $review->id }}.jpg">
       @else
-          <img class='book-image' src="{{ asset('images/noimage.png') }}">
+          <!-- <img class='book-image' src="{{ asset('images/noimage.png') }}"> -->
       @endif
     </div>
     <a href="{{ route('index') }}" class='btn btn-info btn-back mb20'>一覧へ戻る</a>

@@ -5229,7 +5229,7 @@ input[type=button].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #3490dc;
+  color: #a45a00;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
@@ -5262,8 +5262,8 @@ input[type=button].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #3490dc;
-  border-color: #3490dc;
+  background-color: #a45a00;
+  border-color: #a45a00;
 }
 
 .page-item.disabled .page-link {
@@ -6979,7 +6979,7 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-  background-color: #38c172 !important;
+  background-color: #ffa03f !important;
 }
 
 a.bg-success:hover,
