@@ -19,18 +19,19 @@
         <p class='h2 mb20'>{{ $review->title }}</p>
         
         <!-- <h2 class='h2'>レビュー本文</h2> -->
-        <p>{{ $review->body }}</p>
+        <p>{!! nl2br(e($review->body)) !!}</p>
         <p class="description">作成<{{ $review->created_at }}></p>
       </section>  
-      <!-- <aside class='review-image'> -->
-@if(!empty($review->image))
-        <img class='book-image' src="/storage/post_images/{{ $review->id }}.jpg">
-@else
-        <img class='book-image' src="{{ asset('images/dummy.png') }}">
-@endif
+
       </aside>
     </div>
-      
+    <div class="image-box">
+      @if(!empty($review->image))
+          <img class='book-image' src="/storage/post_images/{{ $review->id }}.jpg">
+      @else
+          <img class='book-image' src="{{ asset('images/noimage.png') }}">
+      @endif
+    </div>
     <a href="{{ route('index') }}" class='btn btn-info btn-back mb20'>一覧へ戻る</a>
 
     </form>

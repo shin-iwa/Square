@@ -1,3 +1,21 @@
+.main-photo {
+  width: 98%;
+  height: 150px;
+  background-image: url('/images/355274_m.jpg');
+  /* background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("/images/355274_m.jpg"); */
+  background-size: cover;
+  margin-bottom: 20px;
+  /* border: 1px solid white; */
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 3px 3px #2e2e2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
 .navbar {
   background-color: #222831;
   color: #fff;
@@ -25,7 +43,9 @@
   color: #fff;
 }
 .main {
-  background-color: #c8cbd0;
+  background-color: #b1b2b5;
+  /* background-color: #f9f9f9; */
+  /* background-color: #fcf5e3; */
   min-height: 85vh;
   padding: 30px 5%;
 }
