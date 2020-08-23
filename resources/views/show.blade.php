@@ -7,10 +7,10 @@
 @section('content')
 <div class="container">
   <h1 class='pagetitle'>レビューページ</h1>
-  <a href="{{ action('ReviewController@edit', $review) }}" class='btn btn-info btn-back mb20'>修正</a>
-  <!-- @if ($review->user_id == Auth::user()->id) -->
-    <a href="/postsdelete/{{ $review->id }}" class='btn btn-info btn-back mb20' rel="nofollow">削除</a>
-  <!-- @endif -->
+    @if ($review->user->id == Auth::user()->id)
+      <a href="{{ action('ReviewController@edit', $review) }}" class='btn btn-info btn-back mb20'>修正</a>
+      <a href="/postsdelete/{{ $review->id }}" class='btn btn-info btn-back mb20' rel="nofollow">削除</a>
+    @endif
   <div class="card">
     <div class="card-body d-flex">
       <section class='review-main'>
@@ -20,7 +20,7 @@
         
         <!-- <h2 class='h2'>レビュー本文</h2> -->
         <p>{{ $review->body }}</p>
-        <p class="description">{{ $review->updated_at }}</p>
+        <p class="description">作成<{{ $review->created_at }}></p>
       </section>  
       <!-- <aside class='review-image'> -->
 @if(!empty($review->image))

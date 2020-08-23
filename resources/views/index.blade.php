@@ -20,7 +20,7 @@
                     {{ $review->body }}
                 </p>
                 <p class='description'>
-                    {{ $review->created_at }}
+                    <{{ $review->created_at }}>
                 </p>
                 <a href="{{  action('ReviewController@show', $review) }}" class='btn btn-secondary detail-btn'>詳細を読む</a>
             </div>
