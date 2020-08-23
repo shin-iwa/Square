@@ -73,8 +73,11 @@ class ReviewController extends Controller
         $review->user_id = Auth::user()->id;
         $review->save();
         
-        $request->image->storeAs('public/images', $review->id . '.jpg');
-
+        if ($request->hasFile('image')) {
+            $review->image = $request->image->storeAs('public/post_images', $review->id . '.jpg');
+            $review->save();
+        }
+        
         return redirect('/')->with('flash_message', '投稿が完了しました');
 
     }

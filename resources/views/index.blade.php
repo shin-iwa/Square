@@ -10,7 +10,7 @@
             <div class="card-body">
             <p class='user_name'>投稿者: {{ $review->user->name }}</p>
             @if(!empty($review->image))
-              <div class='image-wrapper'><img class='book-image' src="{{ asset('storage/images/'.$review->image) }}"></div>
+              <div class='image-wrapper'><img class='book-image' src="/storage/post_images/{{ $review->id }}.jpg"></div>
             @else
                 <div class='image-wrapper'><img class='book-image' src="{{ asset('images/dummy.png') }}"></div>
             @endif
