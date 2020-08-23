@@ -1,8 +1,7 @@
 .main-photo {
   width: 98%;
-  height: 150px;
+  height: 200px;
   background-image: url('/images/355274_m.jpg');
-  /* background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("/images/355274_m.jpg"); */
   background-size: cover;
   margin-bottom: 20px;
   /* border: 1px solid white; */

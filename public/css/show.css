@@ -1,10 +1,9 @@
 .review-main {
   width: 100%;
-  padding: 20px;
+  padding: 30px;
 }
 .review-image {
   width: 30%;
-
 }
 .review-image img {
   max-width: 100%;
@@ -26,7 +25,7 @@
   width: 100%; */
   /* width: 150px; */
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 30px;
   object-fit: cover;
 }
 .user_name {
