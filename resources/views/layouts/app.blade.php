@@ -96,7 +96,7 @@
             @yield('content')
         </main>
         <footer class='footer p20'>
-            <small class='copyright'>Square 2020 copyright</small>
+            <small class='copyright'>BookSquare 2020 copyright</small>
         </footer>
     </div>
 </body>

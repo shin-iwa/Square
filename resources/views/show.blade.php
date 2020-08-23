@@ -14,15 +14,16 @@
   <div class="card">
     <div class="card-body d-flex">
       <section class='review-main'>
+        <div class="date">
+          <p class="description">{{ $review->created_at }}</p>
+        </div>
         <p class='user_name'>投稿者: {{ $review->user->name }}</p>
         <!-- <h2 class='h2'>本のタイトル</h2> -->
         <p class='h2 mb20'>{{ $review->title }}</p>
         
         <!-- <h2 class='h2'>レビュー本文</h2> -->
         <p>{!! nl2br(e($review->body)) !!}</p>
-        <p class="description">作成<{{ $review->created_at }}></p>
       </section>  
-
       </aside>
     </div>
     <div class="image-box">

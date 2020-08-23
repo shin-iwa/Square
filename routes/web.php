@@ -24,5 +24,4 @@ Route::group(['middleware' => 'auth'],function() {
     Route::get('/postsdelete/{review_id}', 'ReviewController@destroy')->name('destroy');
 
 });
-
 Route::get('/home', 'HomeController@index')->name('home');

@@ -85,4 +85,5 @@ class ReviewController extends Controller
         $review->delete();
         return redirect('/')->with('flash_message', '削除が完了しました');
     }
+    
 }
