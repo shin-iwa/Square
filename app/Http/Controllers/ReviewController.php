@@ -41,17 +41,14 @@ class ReviewController extends Controller
 
         $review->title = $request->title;
         $review->body = $request->body;
+        $review->user_id = Auth::user()->id;
+        $review->save();
         
-        if($request->hasFile('image')) {
-            // Review::delete('public/image/' . $review->image);
-            $request->file('image')->store('/public/images');
-            $data = ['image'=> $request->file('image')->hashName()];
-
-        }else{
-            $data= ['user_id'=>\Auth::id(),'title'=>$review['title'],'body'=>$review['body']];
+        if ($request->hasFile('image')) {
+            $review->image = $request->image->storeAs('public/post_images', $review->id . '.jpg');
+            $review->save();
         }
-
-        $review->save(); 
+        
         return view('show')->with('review', $review)->with('flash_message', '修正が完了しました');
     }
 
@@ -77,7 +74,7 @@ class ReviewController extends Controller
             $review->image = $request->image->storeAs('public/post_images', $review->id . '.jpg');
             $review->save();
         }
-        
+
         return redirect('/')->with('flash_message', '投稿が完了しました');
 
     }
