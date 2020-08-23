@@ -5,6 +5,8 @@
   justify-content: center;
   height:150px;
   margin-bottom: 10px;
+  /* border: 1px solid rgb(177, 116, 1);
+  border-radius: 10px; */
   /* width:200px; */
 }
 .book-image {
@@ -13,7 +15,7 @@
   /* height: 100%;
   width: 100%; */
   /* width: 150px; */
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   object-fit: cover;
 }
 .book-title {
@@ -42,11 +44,14 @@
 }
 .date-p {
   margin: 0 auto;
-  border: 1px solid gray;
+  border: 1px solid rgb(233, 172, 59);
   border-radius: 50%;
-  background-color: gray;
+  background-color: rgb(242, 166, 25);
   color:white;
   width: 60px;
   font-size: 1.1rem;
   text-align: center;
+}
+hr {
+  border: 1px solid rgba(233, 209, 164, 0.6);
 }
