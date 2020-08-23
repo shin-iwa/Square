@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container">
-  <h1 class='pagetitle'>レビューページ</h1>
+  <!-- <h1 class='pagetitle'>レビュー詳細</h1> -->
     @if ($review->user->id == Auth::user()->id)
       <a href="{{ action('ReviewController@edit', $review) }}" class='btn btn-info btn-back mb20'>修正</a>
       <a href="/postsdelete/{{ $review->id }}" class='btn btn-info btn-back mb20' rel="nofollow">削除</a>
