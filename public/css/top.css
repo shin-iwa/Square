@@ -1,6 +1,10 @@
 .image-wrapper {
   text-align: center;
-  height:200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:150px;
+  margin-bottom: 10px;
   /* width:200px; */
 }
 .book-image {
