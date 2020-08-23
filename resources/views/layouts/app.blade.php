@@ -80,7 +80,11 @@
                 </div>
             </div>
         </nav>
-
+        <div>
+            <div class="main-photo">
+                <p class="main-font">その本の良さ、みんなに広めてみませんか？</p>
+            </div>
+        </div>
         <main class="main">
             <!-- フラッシュメッセージ -->
             @if(session('flash_message'))

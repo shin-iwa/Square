@@ -1,9 +1,9 @@
 .main-photo {
-  width: 98%;
+  width: 100%;
   height: 200px;
-  background-image: url('/images/355274_m.jpg');
+  background-image: url('/images/bookcase.jpg');
   background-size: cover;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   /* border: 1px solid white; */
   font-size: 2rem;
   font-weight: bold;
@@ -59,4 +59,8 @@
 }
 .copyright {
   color: #fff;
+}
+
+.review-title {
+  text-align: center;
 }

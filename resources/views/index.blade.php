@@ -4,10 +4,6 @@
 @endsection
 @section('content')
 <div class="row justify-content-center">
-<div class="main-photo">
-    <p class="main-font">その本の良さ、みんなに広めてみませんか？</p>
-
-</div>
 
 @foreach($reviews as $review)
     <div class="col-md-4">
@@ -19,7 +15,6 @@
             @else
                 <div class='image-wrapper'><img class='book-image' src="{{ asset('images/noimage.png') }}"></div>
             @endif
-
                 <h3 class='h3 book-title'>{{ $review->title }}</h3>
                 <p class='description'>
                     {{ $review->body }}
