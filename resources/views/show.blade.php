@@ -18,6 +18,7 @@
           <p class="description">{{ $review->created_at }}</p>
         </div>
         <p class='user_name'>投稿者: {{ $review->user->name }}</p>
+        <hr>
         <!-- <h2 class='h2'>本のタイトル</h2> -->
         <p class='h2 mb20'>{{ $review->title }}</p>
         

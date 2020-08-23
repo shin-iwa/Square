@@ -13,13 +13,19 @@
                 <div>
                     <p class="date-p">{{ $review->created_at->format('m/d') }}</p>
                 </div>
+                <hr>
             </div>
             <p class='user_name'>投稿者: {{ $review->user->name }}</p>
             @if(!empty($review->image))
+            <a href="{{  action('ReviewController@show', $review) }}" >
               <div class='image-wrapper'><img class='book-image' src="/storage/post_images/{{ $review->id }}.jpg"></div>
+            </a>
             @else
+            <a href="{{  action('ReviewController@show', $review) }}">
                 <div class='image-wrapper'><img class='book-image' src="{{ asset('images/noimage.png') }}"></div>
+            </a>
             @endif
+            <hr>
                 <h3 class='h3 book-title'>{{ $review->title }}</h3>
                 <p class='description'>
                     {{ $review->body }}
