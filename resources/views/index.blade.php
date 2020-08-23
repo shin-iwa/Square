@@ -8,11 +8,13 @@
     <div class="col-md-4">
         <div class="card mb50">
             <div class="card-body">
+            <p class='user_name'>投稿者: {{ $review->user->name }}</p>
             @if(!empty($review->image))
               <div class='image-wrapper'><img class='book-image' src="{{ asset('storage/images/'.$review->image) }}"></div>
             @else
                 <div class='image-wrapper'><img class='book-image' src="{{ asset('images/dummy.png') }}"></div>
             @endif
+
                 <h3 class='h3 book-title'>{{ $review->title }}</h3>
                 <p class='description'>
                     {{ $review->body }}

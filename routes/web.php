@@ -21,6 +21,7 @@ Route::group(['middleware' => 'auth'],function() {
     Route::post('/review/store','ReviewController@store')->name('store');
     Route::get('/{review}/edit', 'ReviewController@edit')->name('edit');
     Route::patch('/{review}', 'ReviewController@update')->name('update');
+    Route::get('/postsdelete/{review_id}', 'ReviewController@destroy')->name('destroy');
 
 });
 Route::get('/home', 'HomeController@index')->name('home');

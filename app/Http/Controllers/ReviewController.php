@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Review;
+use Illuminate\Support\Facades\Storage;
+use Auth;
+use Validator;
 
 class ReviewController extends Controller
 {
@@ -30,7 +33,6 @@ class ReviewController extends Controller
 
     public function update(Request $request, Review $review)
     {
-
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'body' => 'required',
@@ -39,43 +41,48 @@ class ReviewController extends Controller
 
         $review->title = $request->title;
         $review->body = $request->body;
-        if($request->hasFile('image')) {
         
-            $review->fill($request->input());
-            $review->pic1 = $request->file('pic1')->store('public/images');
-
-
+        if($request->hasFile('image')) {
+            // Review::delete('public/image/' . $review->image);
+            $request->file('image')->store('/public/images');
+            $data = ['image'=> $request->file('image')->hashName()];
 
         }else{
             $data= ['user_id'=>\Auth::id(),'title'=>$review['title'],'body'=>$review['body']];
         }
-        $review->save();
-        return view('show')->with('review', $review)->with('flash_message', '修正が完了しました');
 
+        $review->save(); 
+        return view('show')->with('review', $review)->with('flash_message', '修正が完了しました');
     }
 
     public function store(Request $request)
     {
-        $post = $request->all();
+    
+        $validator = Validator::make($request->all() , ['title' => 'required|max:255', 'body' => 'required', 'image' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',]);
 
-        $validatedData = $request->validate([
-            'title' => 'required|max:255',
-            'body' => 'required',
-            'image' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-
-        if($request->hasFile('image')) {
-        
-            $request->file('image')->store('/public/images');
-            $data = ['user_id' => \Auth::id(), 'title'=> $post['title'],'body'=> $post['body'],'image'=> $request->file('image')->hashName()];
-
-        }else{
-            $data= ['user_id'=>\Auth::id(),'title'=>$post['title'],'body'=>$post['body']];
+        //バリデーションの結果がエラーの場合
+        if ($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator->errors())->withInput();
         }
 
-        Review::insert($data);
+        // モデル作成
+        $review = new Review;
+        $review->title = $request->title;
+        $review->body = $request->body;
+        $review->user_id = Auth::user()->id;
+        $review->save();
+        
+        $request->image->storeAs('public/images', $review->id . '.jpg');
 
         return redirect('/')->with('flash_message', '投稿が完了しました');
 
+    }
+
+    public function destroy($review_id)
+    {
+        $review = Review::find($review_id);
+        $review->delete();
+        return redirect('/')->with('flash_message', '削除が完了しました');
     }
 }
