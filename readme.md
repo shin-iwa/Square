@@ -9,7 +9,7 @@ Please search for it on the internet.
 <img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93222925-6fc67700-f7aa-11ea-8cec-adaf399b952c.png">
 
 # About
-This app is Novel Posting site. You can use full systems! It's possible to read all novels. But if you write new novels, please make an account.
+This app is Book Review site. You can use full systems! Please make an account.
 
 # Technology used
 This application uses the following open source packages:
@@ -21,9 +21,12 @@ This application uses the following open source packages:
 ## users table
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
-|email|string|null: false, unique: true|
-|encrypted_password|string|null: false|
+|id|bigIncrements||
+|name|string||
+|email|string|unique|
+|email_verified_at|timestamp|nullable|
+|password|string||
+
 
 ### Association
 - has_many :tweets
