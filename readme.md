@@ -33,49 +33,31 @@ This application uses the following open source packages:
 - has_many :comments
 
 
-## tweets table
+## password_resets table
 |Column|Type|Options|
 |------|----|-------|
-|title|string|null: false|
-|text|text|null: false|
-|user_id|integer|null: false|
+|email|string|index|
+|token|stribg|null: false|
+|created_at|timestamp|nullable|
 
 ### Association
 - belongs_to :user
 - has_many :comments
 
 
-## comments table
+## reviews table
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false|
-|tweet_id|integer|null: false|
+|id|bigIncrements||
+|user_id|bigInteger|unsigned|
+|user_id|foreign|references: on, onUpdate: cascade, onDelete: cascade|
+|title|string||
+|body|longText||
+|image|string|nullable|
+|status|tinyInteger|default: 1,comment|
+|updated_at|timestamp||
+|created_at|timestamp||
 
 ### Association
 - belongs_to :tweet
-- belongs_to :user 
-
-## articles table
-|Column|Type|Options|
-|------|----|-------|
-|title|string|null: false|
-|body|text|null: false|
-|user_id|references| null: false|
-
-### Association
-- belongs_to :user
-- has_many :novels
-
-
-## novels table
-|Column|Type|Options|
-|------|----|-------|
-|title|string|null: false|
-|body|text|null: false|
-|user_id|references|null: false, foreign_key: true|
-|article_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :article
 - belongs_to :user 
