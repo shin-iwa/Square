@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class='pagetitle'>修正ページ</h1>
+<h2 class="review-title">修正ページ</h1>
   @if($errors->any())
     <div class='alert alert-danger'>
       <ul>
