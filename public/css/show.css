@@ -1,13 +1,36 @@
 .review-main {
-  width: 70%;
+  width: 100%;
+  padding: 30px;
 }
 .review-image {
   width: 30%;
 }
 .review-image img {
   max-width: 100%;
+
 }
 .btn-back {
   width: 10em;
   margin: auto;
+}
+.image-box {
+  display: flex;
+  justify-content: center;
+}
+
+.book-image {
+  max-height: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  padding: 30px;
+  object-fit: cover;
+}
+.user_name {
+  font-size: 1rem;
+}
+.pagetitle {
+  color: #614425;
+}
+.date {
+  text-align: right;
 }

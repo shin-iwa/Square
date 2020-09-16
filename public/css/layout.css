@@ -1,3 +1,18 @@
+.main-photo {
+  width: 100%;
+  height: 200px;
+  background-image: url('/images/bookcase.jpg');
+  background-size: cover;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 3px 3px #2e2e2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
 .navbar {
   background-color: #222831;
   color: #fff;
@@ -6,11 +21,29 @@
   height: 60px;
   margin-right: 15px;
 }
+.nav-link-alta {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+}
+.nav-link-alta:hover,
+.nav-link-alta:focus {
+  text-decoration: none;
+  color: #6c757d;
+}
+.nav-link-alta.disabled {
+
+  pointer-events: none;
+  cursor: default;
+}
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
 }
 .main {
-  background-color: #393e46;
+  /* background-color: #b1b2b5; */
+  background-color: #fef4e9;
+  /* background-color: #f9f9f9; */
+  /* background-color: #fcf5e3; */
   min-height: 85vh;
   padding: 30px 5%;
 }
@@ -19,9 +52,13 @@
   margin-bottom: 20px;
 }
 .footer {
-  background-color: #222831;
+  background-color: #945900;
   text-align: center;
 }
 .copyright {
   color: #fff;
+}
+
+.review-title {
+  text-align: center;
 }

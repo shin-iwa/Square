@@ -26,7 +26,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
@@ -46,15 +46,15 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                             <li class="nav-item">
-                                <a href="{{ route('create')}}" class='nav-link'>レビューを書く</a>
+                                <a href="{{ route('create')}}" class='nav-link-alta'>レビューを書く</a>
                             </li>
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link-alta" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link-alta" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -80,7 +80,11 @@
                 </div>
             </div>
         </nav>
-
+        <div>
+            <div class="main-photo">
+                <p class="main-font">その本の良さ、みんなに広めてみませんか？</p>
+            </div>
+        </div>
         <main class="main">
             <!-- フラッシュメッセージ -->
             @if(session('flash_message'))
@@ -92,7 +96,7 @@
             @yield('content')
         </main>
         <footer class='footer p20'>
-            <small class='copyright'>Laravel Book Reviews 2019 copyright</small>
+            <small class='copyright'>BookSquare 2020 copyright</small>
         </footer>
     </div>
 </body>
