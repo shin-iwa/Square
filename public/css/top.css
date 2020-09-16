@@ -11,9 +11,17 @@
   max-width: 100%;
   object-fit: cover;
 }
+
+.title-frame {
+  display: flex;
+  justify-content: center;
+}
+
 .book-title {
   height: 3.5em;
   overflow: hidden;
+  margin: 0 auto;
+  /* width: 250px; */
 }
 .description {
   width: 100%;

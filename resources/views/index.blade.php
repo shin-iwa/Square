@@ -24,7 +24,9 @@
                 <div class='image-wrapper'><img class='book-image' src="{{ asset('images/noimage.png') }}"></div>
             </a>
             @endif
-                <h3 class='h3 book-title'>{{ $review->title }}</h3>
+                <div class="title-frame">
+                    <h3 class='h3 book-title'>{{ $review->title }}</h3>
+                </div>
                 <p class='description'>
                     {{ $review->body }}
                 </p>
