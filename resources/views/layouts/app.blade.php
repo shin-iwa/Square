@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'BookSquare') }}</title>
+    <title>BookSquare</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -30,7 +30,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    BookSquare
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
