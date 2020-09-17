@@ -3,7 +3,7 @@
 I am making Book Review site.
 
 # Proto
-You can check this app on <a href="">AWS</a>!
+You can check this app on <a href="http://54.95.64.113/">AWS</a>!
 Please search for it on the internet.
 
 <img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93222925-6fc67700-f7aa-11ea-8cec-adaf399b952c.png">
@@ -16,48 +16,5 @@ This application uses the following open source packages:
 
 <img width="531" src="https://user-images.githubusercontent.com/66307522/93224603-3ee74180-f7ac-11ea-8e2f-899d4181827d.jpg">
 
-# Database
+<img width="531" src="https://user-images.githubusercontent.com/66307522/93421958-a22cbd00-f8ed-11ea-8715-8825b5e741ae.png">
 
-## users table
-|Column|Type|Options|
-|------|----|-------|
-|id|bigIncrements||
-|name|string||
-|email|string|unique|
-|email_verified_at|timestamp|nullable|
-|password|string||
-
-
-### Association
-- has_many :tweets
-- has_many :comments
-
-
-## password_resets table
-|Column|Type|Options|
-|------|----|-------|
-|email|string|index|
-|token|stribg|null: false|
-|created_at|timestamp|nullable|
-
-### Association
-- belongs_to :user
-- has_many :comments
-
-
-## reviews table
-|Column|Type|Options|
-|------|----|-------|
-|id|bigIncrements||
-|user_id|bigInteger|unsigned|
-|user_id|foreign|references: on, onUpdate: cascade, onDelete: cascade|
-|title|string||
-|body|longText||
-|image|string|nullable|
-|status|tinyInteger|default: 1,comment|
-|updated_at|timestamp||
-|created_at|timestamp||
-
-### Association
-- belongs_to :tweet
-- belongs_to :user 
