@@ -11,10 +11,11 @@ Please search for it on the internet.
 # About
 This app is Book Review site. You can use full systems! Please make an account.
 
+<img width="531" src="https://user-images.githubusercontent.com/66307522/93421958-a22cbd00-f8ed-11ea-8715-8825b5e741ae.png">
+
+
 # Technology used
 This application uses the following open source packages:
 
 <img width="531" src="https://user-images.githubusercontent.com/66307522/93224603-3ee74180-f7ac-11ea-8e2f-899d4181827d.jpg">
-
-<img width="531" src="https://user-images.githubusercontent.com/66307522/93421958-a22cbd00-f8ed-11ea-8715-8825b5e741ae.png">
 
