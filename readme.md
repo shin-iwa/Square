@@ -8,10 +8,11 @@
 ## このアプリケーションについて
 このアプリケーションは<a href="http://54.95.64.113/">AWS</a>にてご確認頂けます。
 
-## トップページ 
+## 参考画像 
+- ### トップページ 
 <img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93222925-6fc67700-f7aa-11ea-8cec-adaf399b952c.png">
 
-## レビュー詳細ページ  
+- ### レビュー詳細ページ  
 <img width="531" src="https://user-images.githubusercontent.com/66307522/93421958-a22cbd00-f8ed-11ea-8715-8825b5e741ae.png">
 
 ## 使用技術
