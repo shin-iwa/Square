@@ -36,3 +36,4 @@ Bootstrapの導入・加工をしたことがなかったので、
 - 運営からのお知らせ機能
 
 ## データベース
+![localhost-db](https://user-images.githubusercontent.com/66307522/94140997-14ca0980-fea7-11ea-9caa-7e2268f927a7.png)
