@@ -29,7 +29,7 @@ PHP及びLarvelの学習の成果検証の為、
 <img width="531" src="https://user-images.githubusercontent.com/66307522/93224603-3ee74180-f7ac-11ea-8e2f-899d4181827d.jpg">
 
 ## 工夫したポイント
-Bootstrapの導入・加工をしたことがなかったので、
+Bootstrapの導入・加工をしたことがなかったので、  
 本アプリケーション作成に際して導入してみました。
 
 ## 今後の課題
