@@ -9,6 +9,8 @@
 PHP及びLarvelの学習の成果検証の為、  
 また、読書習慣を定着化する為のツールとして作成致しました。
 
+![movie_square](https://user-images.githubusercontent.com/66307522/94153923-51eac780-feb8-11ea-825b-4f795aad115a.gif)
+
 ## このアプリケーションについて
 このアプリケーションは<a href="http://54.95.64.113/">AWS</a>にてご確認頂けます。
 
