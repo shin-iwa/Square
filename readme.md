@@ -17,7 +17,8 @@ PHP及びLarvelの学習の成果検証の為、
 <img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93222925-6fc67700-f7aa-11ea-8cec-adaf399b952c.png">
 
 - ### レビュー詳細ページ  
-<img width="531" src="https://user-images.githubusercontent.com/66307522/93421958-a22cbd00-f8ed-11ea-8715-8825b5e741ae.png">
+<img width="1000" alt="screen2" src="https://user-images.githubusercontent.com/66307522/93421958-a22cbd00-f8ed-11ea-8715-8825b5e741ae.png">
+
 
 ## 使用技術
 このアプリケーションは、以下のオープンソースパッケージを使用しております。
@@ -25,11 +26,13 @@ PHP及びLarvelの学習の成果検証の為、
 <img width="531" src="https://user-images.githubusercontent.com/66307522/93224603-3ee74180-f7ac-11ea-8e2f-899d4181827d.jpg">
 
 ## 工夫したポイント
-Bootstrapを使用したことがなかったので、
-本アプリケーション作成に導入してみた。
+Bootstrapの導入・加工をしたことがなかったので、
+本アプリケーション作成に際して導入してみました。
 
 ## 今後の課題
 今後導入したい機能
 
 - レビューへのコメント機能
 - 運営からのお知らせ機能
+
+## データベース
